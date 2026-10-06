@@ -1,4 +1,5 @@
 {
+  "username": "kevish-dev",
   "widgets": [
     {
       "widgetId": "ascii-art",
@@ -6844,7 +6845,7 @@
       "name": "Premium-ascii-dev-score Widget",
       "position": {
         "x": 10,
-        "y": 896
+        "y": 840
       },
       "size": {
         "width": 400,
@@ -6868,7 +6869,7 @@
       "name": "Premium-ascii-insights Widget",
       "position": {
         "x": 390,
-        "y": 896
+        "y": 840
       },
       "size": {
         "width": 400,
@@ -6926,7 +6927,7 @@
       "name": "Codeweb-showcase-cards Widget",
       "position": {
         "x": 10,
-        "y": 1440
+        "y": 1360
       },
       "size": {
         "width": 780,
@@ -6956,7 +6957,7 @@
       "name": "Codeweb-retro-grid Widget",
       "position": {
         "x": 10,
-        "y": 1680
+        "y": 1600
       },
       "size": {
         "width": 780,
@@ -7020,7 +7021,7 @@
       "name": "Stats Widget",
       "position": {
         "x": 10,
-        "y": 768
+        "y": 712
       },
       "size": {
         "width": 780,
@@ -7037,7 +7038,7 @@
       "name": "Controlplane-foundry Widget",
       "position": {
         "x": 10,
-        "y": 1154
+        "y": 1072
       },
       "size": {
         "width": 780,
@@ -7069,7 +7070,7 @@
       "name": "Minecraft-death-screen Widget",
       "position": {
         "x": 10,
-        "y": 1952
+        "y": 1872
       },
       "size": {
         "width": 780,
@@ -7091,7 +7092,12 @@
     "padding": 24,
     "themeMode": "dark",
     "templateStyle": "native",
-    "transparentBackground": false
+    "transparentBackground": true
   },
-  "templateId": "terminal"
+  "templateId": "terminal",
+  "profileSlug": "default",
+  "metadata": {
+    "revision": "rev_1791325294027_ptzd0",
+    "updatedAt": "2026-10-06T22:21:37.017Z"
+  }
 }
