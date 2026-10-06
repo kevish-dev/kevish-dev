@@ -14,18 +14,18 @@ import xml.dom.minidom as minidom
 
 # slot -> (config key, target width px, max seconds, fps)
 SLOTS = {
-    "left": ("leftGifUrl", 564, 3, 8),
-    "r1": ("card1GifUrl", 220, 3, 8),
-    "r2": ("card2GifUrl", 220, 3, 8),
+    "left": ("leftGifUrl", 564, 2.5, 6),
+    "r1": ("card1GifUrl", 220, 2.5, 6),
+    "r2": ("card2GifUrl", 220, 2.5, 6),
 }
-MAX_B64 = 700_000
+MAX_B64 = 160_000
 
 
 def fetch_small_gif(url, width, secs, fps):
     with tempfile.TemporaryDirectory() as d:
         src, pal, out = (os.path.join(d, n) for n in ("src", "pal.png", "out.gif"))
         subprocess.run(["curl", "-fsSL", "--max-time", "90", "-A", "Mozilla/5.0", "-o", src, url], check=True)
-        for colors, w in ((48, width), (32, width), (24, int(width * 0.75)), (16, int(width * 0.6))):
+        for colors, w in ((32, width), (24, width), (24, int(width * 0.8)), (16, int(width * 0.7)), (16, int(width * 0.55))):
             vf = f"fps={fps},scale={w}:-1:flags=lanczos"
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-t", str(secs), "-i", src,
                             "-vf", f"{vf},palettegen=max_colors={colors}", pal], check=True)
@@ -73,6 +73,23 @@ def fix_comments(svg):
     return re.sub(r"<!--(.*?)-->", fix, svg, flags=re.S)
 
 
+def minify(svg):
+    svg = re.sub(r"<!--.*?-->", "", svg, flags=re.S)
+    svg = re.sub(r"@import url\([^)]*\);?", "", svg)
+    svg = re.sub(r">\s*\n\s*<", "><", svg)
+    return re.sub(r"\n\s*\n+", "\n", svg)
+
+
+def minify_inner_svgs(svg):
+    def fix(m):
+        try:
+            inner = minify(base64.b64decode(m.group(2)).decode("utf-8"))
+        except Exception:
+            return m.group(0)
+        return m.group(1) + base64.b64encode(inner.encode()).decode() + m.group(3)
+    return re.sub(r'(href="data:image/svg\+xml;base64,)([^"]*)(")', fix, svg)
+
+
 def embed_gifs(svg, gifs):
     for slot, uri in gifs.items():
         pat = re.compile(
@@ -102,6 +119,7 @@ def main():
         svg = open(path, encoding="utf-8").read()
         svg = fix_comments(merge_dup_attrs(svg))
         svg = embed_gifs(svg, gifs)
+        svg = minify_inner_svgs(minify(svg))
         try:
             minidom.parseString(svg.encode("utf-8"))
         except Exception as e:
