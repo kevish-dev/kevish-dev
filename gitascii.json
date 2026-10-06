@@ -7015,41 +7015,6 @@
       "zIndex": 9
     },
     {
-      "instanceId": "widget_1791293793672",
-      "widgetId": "codeweb-social-badge",
-      "name": "Codeweb-social-badge Widget",
-      "position": {
-        "x": 10,
-        "y": 712
-      },
-      "size": {
-        "width": 780,
-        "height": 48
-      },
-      "config": {
-        "platforms": [
-          "github",
-          "linkedin",
-          "x",
-          "instagram",
-          "gmail",
-          "portfolio"
-        ],
-        "label_github": "",
-        "animSpeed": "14s",
-        "staticMode": false,
-        "renderMode": "multi",
-        "animationType": "fade-in",
-        "animationPreviewKey": 15,
-        "lockAspectRatio": false,
-        "label_portfolio": "Portfolio",
-        "label_x": ""
-      },
-      "locked": false,
-      "visible": true,
-      "zIndex": 10
-    },
-    {
       "instanceId": "widget_1791300450029",
       "widgetId": "stats",
       "name": "Stats Widget",
