@@ -1,5 +1,5 @@
 
-<svg width="800" height="2228" viewBox="0 0 800 2228" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="800" height="1960" viewBox="0 0 800 1960" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Teko:wght@500;600;700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Fira+Code:wght@300..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Outfit:wght@100..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap');
 
@@ -29,7 +29,7 @@
     }
   </style>
 
-  <rect class="" width="800" height="2228" fill="#060606" rx="0" />
+  <rect class="" width="800" height="1960" fill="#060606" rx="0" />
 
   
     <g transform="translate(10, 256)" id="widget-widget_1791292532472_1">
@@ -2362,110 +2362,6 @@
           <text x="0" y="28" font-family="Inter Tight" font-size="28" font-weight="300" fill="#00ffff">0</text>
           <text x="0" y="44" font-family="Inter Tight" font-size="10" font-weight="500" fill="#7a7a7a" letter-spacing="1.5">GISTS</text>
         </g>
-  
-  
-    </g>
-  
-
-    <g transform="translate(10, 1952)" id="widget-widget_1791300895834">
-
-      
-      
-      
-      
-      
-    <svg id="widget_1791300895834" width="780" height="260" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <style>
-          #widget_1791300895834 .mc-font {
-            font-family: 'Minecraft', 'Courier New', monospace, sans-serif;
-            font-smooth: never;
-            -webkit-font-smoothing: none;
-          }
-          #widget_1791300895834 .death-title { fill: #ff0000; font-size: 32px; font-weight: bold; text-shadow: 2px 2px 0 #550000, 3px 3px 0 #000000; }
-          #widget_1791300895834 .death-msg { fill: #ffffff; font-size: 11px; text-shadow: 1px 1px 0 #000000; }
-          #widget_1791300895834 .score-text { fill: #ffffff; font-size: 12px; font-weight: bold; text-shadow: 1px 1px 0 #000000; }
-          #widget_1791300895834 .btn-text { fill: #ffffff; font-size: 11px; font-weight: bold; text-shadow: 1px 1px 0 #222222; }
-        </style>
-        <radialGradient id="death-vignette-widget_1791300895834" cx="50%" cy="50%" r="60%">
-          <stop offset="0%" stop-color="#4a0d0d" stop-opacity="0.85" />
-          <stop offset="100%" stop-color="#140202" stop-opacity="0.98" />
-        </radialGradient>
-      </defs>
-
-      <!-- Crimson Death Vignette Overlay -->
-      <rect width="780" height="260" fill="url(#death-vignette-widget_1791300895834)" rx="2" />
-
-      <!-- CENTER: YOU DIED! TITLE -->
-      <g transform="translate(390, 54)">
-        <text class="mc-font death-title" x="0" y="0" text-anchor="middle">You Died!</text>
-      </g>
-
-      <!-- CAUSE OF DEATH STACK TRACE MESSAGE -->
-      <g transform="translate(390, 86)">
-        <text class="mc-font death-msg" x="0" y="0" text-anchor="middle">@kevish-dev was slain by <tspan fill="#ffff55">Uncaught TypeError</tspan> in Production</text>
-        <text class="mc-font score-text" x="0" y="24" text-anchor="middle">Score: <tspan fill="#55ff55">9,090</tspan> (889 Commits, 4 Stars)</text>
-      </g>
-
-      <!-- DROPPED ITEMS ON FLOOR (PIXEL ART) -->
-      <g transform="translate(330, 128)">
-        
-        <g transform="translate(2, 2)">
-          <line x1="3" y1="16" x2="13" y2="6" stroke="#4a2c0f" stroke-width="2.5" />
-          <path d="M6,3 Q14,1 17,6 Q15,11 12,13 Q12,8 9,6 Z" fill="#20a3a3" stroke="#0e4b4b" stroke-width="0.8" />
-          <path d="M7,4 Q13,3 15,7 Q14,10 12,11 Q11,7 9,5 Z" fill="#5bf2f2" />
-        </g>
-      
-        
-        <g transform="translate(38, 2)">
-          <rect x="2" y="2" width="14" height="15" rx="1" fill="#85361e" stroke="#220a04" stroke-width="1" />
-          <rect x="4" y="3" width="10" height="13" fill="#eae3d2" />
-          <rect x="8" y="1" width="2" height="16" fill="#c62828" />
-          <polygon points="2,2 6,2 2,6" fill="#f5bc00" />
-          <rect x="5" y="6" width="3" height="1" fill="#9c27b0" />
-        </g>
-      
-        
-        <g transform="translate(74, 2)">
-          <circle cx="9" cy="10" r="7" fill="#000000" />
-          <circle cx="9" cy="10" r="6" fill="#f5bc00" />
-          <path d="M5,7 Q9,4 13,7 Q14,13 9,15 Q4,13 5,7 Z" fill="#ffee55" />
-          <rect x="8" y="2" width="2" height="3" fill="#8b5a2b" />
-          <rect x="9" y="1" width="3" height="2" fill="#4d7e26" />
-        </g>
-      
-        
-        <g transform="translate(111, 3)">
-          <polygon points="7,1 12,4 12,11 7,14 2,11 2,4" fill="#00b341" stroke="#004d1a" stroke-width="0.8" />
-          <polygon points="7,3 10,5 10,9 7,12 4,9 4,5" fill="#55ff55" />
-          <rect x="5" y="5" width="2" height="2" fill="#ffffff" />
-        </g>
-      
-      </g>
-
-      <!-- 2 INTERACTIVE MINECRAFT STONE BUTTONS -->
-      <g transform="translate(200, 202)">
-        <!-- Button 1: Respawn (git reset --hard) -->
-        <g transform="translate(0, 0)">
-          <rect x="0" y="0" width="180" height="32" fill="#585858" />
-          <line x1="0" y1="0" x2="180" y2="0" stroke="#8b8b8b" stroke-width="2" />
-          <line x1="0" y1="0" x2="0" y2="32" stroke="#8b8b8b" stroke-width="2" />
-          <line x1="0" y1="32" x2="180" y2="32" stroke="#373737" stroke-width="2" />
-          <line x1="180" y1="0" x2="180" y2="32" stroke="#373737" stroke-width="2" />
-          <text class="mc-font btn-text" x="90" y="20" text-anchor="middle">Respawn (git reset)</text>
-        </g>
-
-        <!-- Button 2: Title Screen (Exit to Vim) -->
-        <g transform="translate(200, 0)">
-          <rect x="0" y="0" width="180" height="32" fill="#585858" />
-          <line x1="0" y1="0" x2="180" y2="0" stroke="#8b8b8b" stroke-width="2" />
-          <line x1="0" y1="0" x2="0" y2="32" stroke="#8b8b8b" stroke-width="2" />
-          <line x1="0" y1="32" x2="180" y2="32" stroke="#373737" stroke-width="2" />
-          <line x1="180" y1="0" x2="180" y2="32" stroke="#373737" stroke-width="2" />
-          <text class="mc-font btn-text" x="90" y="20" text-anchor="middle">Title Screen (Exit to Vim)</text>
-        </g>
-      </g>
-    </svg>
   
   
     </g>
