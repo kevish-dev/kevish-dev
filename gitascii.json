@@ -7065,23 +7065,6 @@
       "locked": false,
       "visible": true,
       "zIndex": 10
-    },
-    {
-      "instanceId": "widget_1791300895834",
-      "widgetId": "minecraft-death-screen",
-      "name": "Minecraft-death-screen Widget",
-      "position": {
-        "x": 10,
-        "y": 1952
-      },
-      "size": {
-        "width": 780,
-        "height": 260
-      },
-      "config": {},
-      "locked": false,
-      "visible": true,
-      "zIndex": 12
     }
   ],
   "globalStyles": {
