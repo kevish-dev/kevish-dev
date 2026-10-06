@@ -6936,9 +6936,9 @@
         "animationType": "fade-in",
         "animationPreviewKey": 10,
         "staticMode": false,
-        "leftGifUrl": "",
+        "leftGifUrl": "https://i.pinimg.com/originals/10/0e/43/100e4369e5567950bf289aa844049600.gif",
         "card1GifUrl": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzVrbTB1NGtqbWc3cW5leDBobWs1anJrNWRpNHhxcmk4enBpODh6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rcfgiyRUsKJDKvrDjK/giphy.gif",
-        "card2GifUrl": "",
+        "card2GifUrl": "https://i.pinimg.com/originals/d2/f9/73/d2f973319f0562957ca9b62b3ac0ea80.gif",
         "card2Icon": "shield",
         "card1Icon": "Target",
         "titleLine1": "With Great Power",
@@ -7065,6 +7065,55 @@
       "locked": false,
       "visible": true,
       "zIndex": 10
+    },
+    {
+      "instanceId": "widget_1791300861810",
+      "widgetId": "controlplane-foundry",
+      "name": "Controlplane-foundry Widget",
+      "position": {
+        "x": 10,
+        "y": 1154
+      },
+      "size": {
+        "width": 780,
+        "height": 328
+      },
+      "config": {
+        "layoutType": "hero",
+        "accentColor": "#55ffff",
+        "secondaryColor": "#c084fc",
+        "customTitle": "",
+        "customBio": "",
+        "showGrid": true,
+        "animationType": "fade-in",
+        "animationPreviewKey": 1,
+        "animationDuration": 2000,
+        "borderColor": "#060606",
+        "showTitle": true,
+        "animationSpeed": 1,
+        "showRepoDesc": true,
+        "repoSortBy": "updated"
+      },
+      "locked": false,
+      "visible": true,
+      "zIndex": 12
+    },
+    {
+      "instanceId": "widget_1791300895834",
+      "widgetId": "minecraft-death-screen",
+      "name": "Minecraft-death-screen Widget",
+      "position": {
+        "x": 10,
+        "y": 1952
+      },
+      "size": {
+        "width": 780,
+        "height": 260
+      },
+      "config": {},
+      "locked": false,
+      "visible": true,
+      "zIndex": 12
     }
   ],
   "globalStyles": {
