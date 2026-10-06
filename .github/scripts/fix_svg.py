@@ -12,28 +12,27 @@ usage: fix_svg.py <gitascii.json> <svg> [<svg> ...]
 import base64, json, os, re, subprocess, sys, tempfile
 import xml.dom.minidom as minidom
 
-# slot -> (config key, target width px, max seconds, fps)
+# slot -> (config key, target width px, fps, max base64 bytes). Full GIF duration is kept.
 SLOTS = {
-    "left": ("leftGifUrl", 564, 2.5, 6),
-    "r1": ("card1GifUrl", 220, 2.5, 6),
-    "r2": ("card2GifUrl", 220, 2.5, 6),
+    "left": ("leftGifUrl", 480, 10, 900_000),
+    "r1": ("card1GifUrl", 330, 10, 500_000),
+    "r2": ("card2GifUrl", 330, 10, 500_000),
 }
-MAX_B64 = 160_000
 
 
-def fetch_small_gif(url, width, secs, fps):
+def fetch_small_gif(url, width, fps, max_b64):
     with tempfile.TemporaryDirectory() as d:
         src, pal, out = (os.path.join(d, n) for n in ("src", "pal.png", "out.gif"))
         subprocess.run(["curl", "-fsSL", "--max-time", "90", "-A", "Mozilla/5.0", "-o", src, url], check=True)
-        for colors, w in ((32, width), (24, width), (24, int(width * 0.8)), (16, int(width * 0.7)), (16, int(width * 0.55))):
+        for colors, w in ((64, width), (48, width), (32, width), (32, int(width * 0.85)), (24, int(width * 0.7)), (16, int(width * 0.6))):
             vf = f"fps={fps},scale={w}:-1:flags=lanczos"
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-t", str(secs), "-i", src,
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src,
                             "-vf", f"{vf},palettegen=max_colors={colors}", pal], check=True)
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-t", str(secs), "-i", src, "-i", pal,
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-i", pal,
                             "-lavfi", f"{vf}[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=4",
                             "-loop", "0", out], check=True)
             data = open(out, "rb").read()
-            if len(data) * 4 / 3 <= MAX_B64:
+            if len(data) * 4 / 3 <= max_b64:
                 break
         return "data:image/gif;base64," + base64.b64encode(data).decode()
 
@@ -106,11 +105,11 @@ def main():
     gifs = {}
     for w in cfg.get("widgets", []):
         if w.get("widgetId") == "codeweb-showcase-cards" and w.get("visible", True):
-            for slot, (key, width, secs, fps) in SLOTS.items():
+            for slot, (key, width, fps, max_b64) in SLOTS.items():
                 url = w.get("config", {}).get(key)
                 if url:
                     try:
-                        gifs[slot] = fetch_small_gif(url, width, secs, fps)
+                        gifs[slot] = fetch_small_gif(url, width, fps, max_b64)
                         print(f"gif {slot}: {len(gifs[slot]) // 1024} KB")
                     except Exception as e:
                         print(f"warning: gif {slot} failed: {e}")
