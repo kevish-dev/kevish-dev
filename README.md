@@ -6,7 +6,7 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://marvel-counter.vercel.app/count.svg?theme=light">
-    <img alt="Visitors" src="https://marvel-counter.vercel.app/count.svg" width="70%">
+    <source media="(prefers-color-scheme: light)" srcset="https://herocount.kevish.dev/count.svg?theme=light">
+    <img alt="Visitors" src="https://herocount.kevish.dev/count.svg" width="70%">
   </picture>
 </p>
